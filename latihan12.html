@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <title>NailArt Studio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      scroll-behavior: smooth;
+      background-color: #fff6fb;
+    }
+
+    /* Tema Warna */
+    .theme-pink {
+      background-color: #ff8fb1;
+      color: white;
+    }
+
+    .btn-pink {
+      background: linear-gradient(45deg, #ff9ac6, #ff6fa2);
+      border: none;
+      color: white;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(255, 111, 159, .4);
+      transition: 0.3s;
+    }
+    .btn-pink:hover {
+      background: linear-gradient(45deg, #ff6fa2, #ff9ac6);
+      transform: scale(1.05);
+      color: white;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.55)),
+      url('https://images.unsplash.com/photo-1612832021463-1dc2d3bd1f06');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+      padding: 160px 20px;
+      text-shadow: 0 3px 8px rgba(0,0,0,.4);
+      animation: fadeIn 1.5s ease;
+    }
+
+    /* Card Layanan */
+    .card-custom {
+      border: none;
+      border-radius: 20px;
+      padding: 15px;
+      background: white;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+      transition: .3s;
+    }
+    .card-custom:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    }
+    .card-custom img {
+      border-radius: 15px;
+    }
+
+    /* Card Paket */
+    .card-price {
+      border-radius: 20px;
+      padding: 25px;
+      background: linear-gradient(135deg, #ffb6d5, #ff8fb1);
+      color: white;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      transition: .3s;
+    }
+    .card-price:hover {
+      transform: translateY(-8px);
+    }
+
+    /* Animasi */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      font-weight: 700;
+      color: #ff4f87;
+    }
+
+    footer {
+      background-color: #ff8fb1;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark theme-pink fixed-top shadow">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">NailArt Studio</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#layanan">Layanan</a></li>
+        <li class="nav-item"><a class="nav-link" href="#produk">Paket Nailart</a></li>
+        <li class="nav-item"><a class="nav-link" href="#galeri">Galeri</a></li>
+        <li class="nav-item"><a class="nav-link" href="#pesan">Pemesanan</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero text-center">
+  <div class="container">
+    <h1 class="display-4 fw-bold">NailArt Studio</h1>
+    <p class="lead mt-2">Nail art elegan dengan sentuhan profesional dan detail premium</p>
+    <button class="btn btn-light btn-lg mt-3" data-bs-toggle="modal" data-bs-target="#infoModal">
+      Kontak Studio
+    </button>
+  </div>
+</section>
+
+<!-- LAYANAN -->
+<section id="layanan" class="container mt-5">
+  <h2 class="text-center mb-4">Layanan Kami</h2>
+  <div class="row">
+
+    <div class="col-md-4 mb-4">
+      <div class="card-custom text-center">
+        <img src="https://images.unsplash.com/photo-1600180758890-a8f4c92f04f1" class="img-fluid rounded mb-3">
+        <h4 class="fw-bold">Basic Manicure</h4>
+        <p>Perawatan kuku dasar untuk hasil bersih, rapi, dan sehat.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card-custom text-center">
+        <img src="https://images.unsplash.com/photo-1610998895058-68f5c5b51e30" class="img-fluid rounded mb-3">
+        <h4 class="fw-bold">Gel Nail Art</h4>
+        <p>Desain nail art modern menggunakan cat gel premium tahan lama.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card-custom text-center">
+        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc57f25c" class="img-fluid rounded mb-3">
+        <h4 class="fw-bold">Extension Acrylic</h4>
+        <p>Perpanjangan kuku kuat, elegan, dan cocok untuk berbagai model.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PRODUK / PAKET -->
+<section id="produk" class="mt-5 p-5" style="background:#fff0f6;">
+  <div class="container">
+    <h2 class="text-center mb-4">Paket Nail Art</h2>
+
+    <div class="row">
+
+      <div class="col-md-4 mb-4">
+        <div class="card-price text-center">
+          <h3 class="fw-bold">Paket Simple</h3>
+          <p>Desain minimalis untuk tampilan clean & daily.</p>
+          <h4 class="fw-bold mt-3">Rp 50.000</h4>
+          <button class="btn-pink mt-2">Pesan</button>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card-price text-center">
+          <h3 class="fw-bold">Paket Premium</h3>
+          <p>Lebih banyak warna, glitter, dan detail kreatif.</p>
+          <h4 class="fw-bold mt-3">Rp 120.000</h4>
+          <button class="btn-pink mt-2">Pesan</button>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card-price text-center">
+          <h3 class="fw-bold">Paket Luxury</h3>
+          <p>Full art eksklusif dengan aksesoris dan ornamen.</p>
+          <h4 class="fw-bold mt-3">Rp 200.000</h4>
+          <button class="btn-pink mt-2">Pesan</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- GALERI -->
+<section id="galeri" class="container mt-5">
+  <h2 class="text-center mb-4">Galeri Nail Art</h2>
+
+  <div class="row">
+    <div class="col-md-4 mb-4"><img class="img-fluid rounded shadow" src="https://images.unsplash.com/photo-1600628422011-915ede5fe9a7"></div>
+    <div class="col-md-4 mb-4"><img class="img-fluid rounded shadow" src="https://images.unsplash.com/photo-1583846746686-cbd41c8036d7"></div>
+    <div class="col-md-4 mb-4"><img class="img-fluid rounded shadow" src="https://images.unsplash.com/photo-1610998895445-ac2a82c44e7a"></div>
+  </div>
+</section>
+
+<!-- FORM PEMESANAN -->
+<section id="pesan" class="container mt-5">
+  <h2 class="text-center mb-4">Form Pemesanan</h2>
+
+  <form class="w-75 mx-auto p-4 bg-white shadow rounded">
+    <div class="mb-3">
+      <label class="form-label">Nama Pelanggan</label>
+      <input type="text" class="form-control" placeholder="Masukkan nama">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Pilih Layanan / Paket</label>
+      <select class="form-select">
+        <option>Basic Manicure</option>
+        <option>Gel Nail Art</option>
+        <option>Extension Acrylic</option>
+        <option>Paket Simple</option>
+        <option>Paket Premium</option>
+        <option>Paket Luxury</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Catatan</label>
+      <textarea class="form-control" rows="3"></textarea>
+    </div>
+
+    <button class="btn-pink w-100">Kirim</button>
+  </form>
+</section>
+
+<!-- MODAL -->
+<div class="modal fade" id="infoModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h4 class="modal-title">Kontak Kami</h4>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        Telepon: 0812-9876-5432<br>
+        Alamat: Jl. Melati No. 21, Kota Semarang<br>
+        Jam Operasional: 09.00 - 20.00
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="text-white text-center p-3 mt-5">
+  © 2025 NailArt Studio. All Rights Reserved.
+</footer>
+
+</body>
+</html>
